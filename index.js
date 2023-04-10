@@ -9,7 +9,7 @@ import moment from "moment";
 console.log("hello");
 app.post('/createFile',(req,res) => {
     const dateTime = moment().format('YYYY-MM-DD_HH-mm-ss');
-    const filepath = `./files/${dateTime}`;
+    const filepath = `./files/${dateTime}.txt`;
     const fileContent = new Date().toISOString();
     fs.writeFile(filepath, fileContent, (err) => {
         if(err) {
